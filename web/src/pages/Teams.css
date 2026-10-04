@@ -1,0 +1,78 @@
+.teams-page {
+  padding: 30px;
+}
+
+.teams-header {
+  margin-bottom: 25px;
+}
+
+.teams-header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.teams-header p {
+  margin-top: 6px;
+  color: #666;
+}
+
+.team-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.team-form input,
+.team-form select {
+  padding: 11px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.team-form input {
+  width: 250px;
+}
+
+.team-form select {
+  width: 220px;
+}
+
+.team-form button {
+  padding: 11px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.success-message {
+  color: green;
+}
+
+.error-message {
+  color: red;
+}
+
+.teams-table-wrapper {
+  overflow-x: auto;
+}
+
+.teams-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.teams-table th,
+.teams-table td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.delete-btn {
+  border: none;
+  padding: 7px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}

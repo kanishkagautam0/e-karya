@@ -1,34 +1,27 @@
-# ================================
-# e-Karya Git Ignore
-# ================================
+# =========================
+# e-Karya - Git Ignore
+# =========================
 
 # Dependencies
 node_modules/
-server/node_modules/
-web/node_modules/
+**/node_modules/
 
 # Environment variables / secrets
 .env
 .env.*
-server/.env
-server/.env.*
-web/.env
-web/.env.*
+**/.env
+**/.env.*
 
 # Allow example environment files
 !.env.example
-!server/.env.example
-!web/.env.example
+!**/.env.example
 
-# Build outputs
+# Build files
 dist/
 build/
-server/dist/
-web/dist/
-
-# Vite
+**/dist/
+**/build/
 .vite/
-web/.vite/
 
 # Logs
 *.log
@@ -36,41 +29,37 @@ npm-debug.log*
 yarn-debug.log*
 pnpm-debug.log*
 
+# Database / local data
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+
 # Coverage
 coverage/
 .nyc_output/
-
-# Temporary files
-*.tmp
-*.temp
 
 # OS files
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# Editor settings
-.vscode/*
-!.vscode/extensions.json
-!.vscode/settings.json
-
-# IDE files
+# Editor / IDE
+.vscode/
 .idea/
 *.iml
 
-# Local database / generated files
-*.sqlite
-*.sqlite3
-*.db
-
-# Prisma generated/local files
-server/prisma/*.db
-server/prisma/*.db-journal
-
-# Cache
-.cache/
-.parcel-cache/
-
-# Backup files
+# Temporary / backup files
+*.tmp
+*.temp
 *.bak
 *.swp
+
+# Local secrets / certificates
+*.pem
+*.key
+*.crt
+*.p12
+
+# Prisma
+**/.prisma/

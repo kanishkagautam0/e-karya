@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./style.css";
 
-const API = "http://localhost:5000/api";
+const API =
+  import.meta.env.VITE_BACKEND_URL || "http://localhost:5000/api";
 
 const getUser = () =>
   JSON.parse(localStorage.getItem("ekUser") || "null");

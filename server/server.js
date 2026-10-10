@@ -10,12 +10,17 @@ const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
 });
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://localhost:5174",
+  process.env.FRONTEND_URL,
+].filter(Boolean);
+
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:5174"],
+    origin: allowedOrigins,
   })
 );
-
 app.use(express.json());
 
 // Convert PostgreSQL user columns to the format used by the frontend
